@@ -9,7 +9,7 @@
 namespace Zelda;
 
 
-class Lieutnan
+class Lieutnant extends Enemy
 {
 
 }

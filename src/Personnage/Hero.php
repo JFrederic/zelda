@@ -26,7 +26,7 @@ class Hero implements Personnage
     }
 
 
-    public function setLife($life)
+    public function setLife(int $life)
     {
         return $this->life = $life;
     }
@@ -36,7 +36,7 @@ class Hero implements Personnage
         return $this->damage;
     }
 
-    public function setDamage($damage)
+    public function setDamage(int $damage)
     {
         return $this->damage = $damage;
     }

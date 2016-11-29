@@ -9,7 +9,7 @@
 namespace Zelda;
 
 
-class Minion
+class Minion extends Enemy
 {
 
 }
