@@ -12,27 +12,27 @@ namespace Zelda;
 class Minion extends Enemy
 {
 
-    public function getLife()
+    public function getLife(): int
     {
         // TODO: Implement getLife() method.
     }
 
-    public function setLife(int $life)
+    public function setLife(int $life): int
     {
         // TODO: Implement setLife() method.
     }
 
-    public function getDamage()
+    public function getDamage(): int
     {
         // TODO: Implement getDamage() method.
     }
 
-    public function setDamage(int $damage)
+    public function setDamage(int $damage): int
     {
         // TODO: Implement setDamage() method.
     }
 
-    public function attack()
+    public function attack(Personnage $personnage)
     {
         // TODO: Implement attack() method.
     }

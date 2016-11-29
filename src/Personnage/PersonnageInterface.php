@@ -11,10 +11,9 @@ namespace Zelda;
 
 interface Personnage
 {
-    public function getLife();
-    public function setLife(int $life);
-    public function getDamage();
-    public function setDamage(int $damage);
-    public function attack();
-
+    public function getLife(): int;
+    public function setLife(int $life): int;
+    public function getDamage(): int;
+    public function setDamage(int $damage): int;
+    public function attack(Personnage $personnage);
 }

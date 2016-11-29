@@ -20,38 +20,38 @@ class Hero implements Personnage
 
     }
 
-    public function getLife()
+    public function getLife(): int
     {
         return $this->life;
     }
 
 
-    public function setLife(int $life)
+    public function setLife(int $life): int
     {
         return $this->life = $life;
     }
 
-    public function getDamage()
+    public function getDamage(): int
     {
         return $this->damage;
     }
 
-    public function setDamage(int $damage)
+    public function setDamage(int $damage): int
     {
         return $this->damage = $damage;
     }
 
-    public function attack()
+    public function attack(Personnage $personnage)
     {
         // TODO: Implement attack() method.
     }
 
-    public function getArmor()
+    public function getArmor(): int
     {
         return $this->armor;
     }
 
-    public function setArmor($armor)
+    public function setArmor($armor): int
     {
         return $this->armor = $armor;
     }
