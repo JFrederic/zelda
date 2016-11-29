@@ -9,7 +9,12 @@
 namespace Zelda;
 
 
-class Personnage
+interface Personnage
 {
+    public function getLife();
+    public function setLife($life);
+    public function getDamage();
+    public function setDamage($damage);
+    public function attack();
 
 }

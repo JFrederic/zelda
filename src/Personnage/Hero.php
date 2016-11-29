@@ -9,7 +9,50 @@
 namespace Zelda;
 
 
-class Hero
+class Hero implements Personnage
 {
+    private $life;
+    private $armor;
+    private $damage;
 
+    public function __construct()
+    {
+
+    }
+
+    public function getLife()
+    {
+        return $this->life;
+    }
+
+
+    public function setLife($life)
+    {
+        return $this->life = $life;
+    }
+
+    public function getDamage()
+    {
+        return $this->damage;
+    }
+
+    public function setDamage($damage)
+    {
+        return $this->damage = $damage;
+    }
+
+    public function attack()
+    {
+        // TODO: Implement attack() method.
+    }
+
+    public function getArmor()
+    {
+        return $this->armor;
+    }
+
+    public function setArmor($armor)
+    {
+        return $this->armor = $armor;
+    }
 }
