@@ -9,7 +9,7 @@
 namespace Zelda;
 
 
-class Enemy
+abstract class Enemy implements Personnage
 {
 
 }
