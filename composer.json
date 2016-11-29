@@ -1,0 +1,24 @@
+{
+  "name": "ouloulou/zelda",
+  "description": "small role game",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Elliot Bouvier",
+      "email": "elliot.bouvier@highroad.re"
+    },
+    {
+      "name": "Fred Jouan",
+      "email": "fj@oscadi.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Zelda\\": "src/"
+    },
+    "config": {
+      "optimize-autoloader": true
+    }
+  }
+}
