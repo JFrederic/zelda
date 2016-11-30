@@ -6,10 +6,15 @@
  * Time: 16:12
  */
 
-namespace Zelda;
+namespace Zelda\Personnage;
 
 
 class Lieutenant extends Enemy
 {
-
+    public function __construct()
+    {
+        parent::__construct();
+        $this->life = 40;
+        $this->damage = 30;
+    }
 }

@@ -6,34 +6,76 @@
  * Time: 16:12
  */
 
-namespace Zelda;
+namespace Zelda\Personnage;
 
 
-abstract class Enemy implements Personage
+abstract class Enemy implements PersonageInterface
 {
+    protected $life;
+    protected $damage;
+    protected $armor;
+
+    public function __construct()
+    {
+        $this->armor = 0;
+        $this->damage = 0;
+        $this->life = 0;
+    }
 
     public function getLife(): int
     {
-        // TODO: Implement getLife() method.
+        return $this->life;
     }
 
     public function setLife(int $life): int
     {
-        // TODO: Implement setLife() method.
+        return $this->life = $life;
+    }
+
+    public function addLife(int $life): int
+    {
+        // TODO: Implement addLife() method.
     }
 
     public function getDamage(): int
     {
-        // TODO: Implement getDamage() method.
+        return $this->damage;
     }
 
     public function setDamage(int $damage): int
     {
-        // TODO: Implement setDamage() method.
+        return $this->damage = $damage;
     }
 
-    public function attack(Personage $personnage)
+    public function attack(PersonageInterface $personage)
     {
-        // TODO: Implement attack() method.
+        if ($this->damage >= $personage->getArmor()) {
+            $health = $personage->getLife() + $personage->getArmor();
+            $health -= $this->damage;
+            $personage->setArmor(0);
+            $personage->setLife($health);
+            return $this->damage;
+        }
+
+        if ($this->damage < $personage->getArmor()) {
+            $personage->setArmor($personage->getArmor() - $this->damage);
+            return $this->damage;
+        }
+        return $this->damage;
+    }
+
+    public function getArmor(): int
+    {
+        return $this->armor;
+    }
+
+    public function setArmor(int $armor): int
+    {
+        return $this->armor = $armor;
+    }
+
+    public function addArmor(int $armor): int
+    {
+        // TODO: Implement addArmor() method.
     }
 }

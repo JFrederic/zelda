@@ -6,10 +6,15 @@
  * Time: 16:12
  */
 
-namespace Zelda;
+namespace Zelda\Personnage;
 
 
 class Minion extends Enemy
 {
-
+    public function __construct()
+    {
+        parent::__construct();
+        $this->life = 20;
+        $this->damage = 10;
+    }
 }

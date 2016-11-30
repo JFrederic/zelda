@@ -6,10 +6,10 @@
  * Time: 16:10
  */
 
-namespace Zelda;
+namespace Zelda\Personnage;
 
 
-class Hero implements Personage
+class Hero implements PersonageInterface
 {
     private $life;
     private $armor;
@@ -17,6 +17,9 @@ class Hero implements Personage
 
     public function __construct()
     {
+        $this->life = 200;
+        $this->damage = 15;
+        $this->armor = 0;
 
     }
 
@@ -31,6 +34,11 @@ class Hero implements Personage
         return $this->life = $life;
     }
 
+    public function addLife(int $life) :int
+    {
+        return $this->life += $life;
+    }
+
     public function getDamage(): int
     {
         return $this->damage;
@@ -41,9 +49,10 @@ class Hero implements Personage
         return $this->damage = $damage;
     }
 
-    public function attack(Personage $personnage)
+    public function attack(PersonageInterface $personage)
     {
-        // TODO: Implement attack() method.
+        return $personage->setLife($personage->getLife() - $this->damage);
+
     }
 
     public function getArmor(): int
@@ -51,8 +60,13 @@ class Hero implements Personage
         return $this->armor;
     }
 
-    public function setArmor($armor): int
+    public function setArmor(int $armor): int
     {
         return $this->armor = $armor;
+    }
+
+    public function addArmor(int $armor): int
+    {
+        return $this->armor += $armor;
     }
 }
