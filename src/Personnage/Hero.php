@@ -9,7 +9,7 @@
 namespace Zelda;
 
 
-class Hero implements Personnage
+class Hero implements Personage
 {
     private $life;
     private $armor;
@@ -41,7 +41,7 @@ class Hero implements Personnage
         return $this->damage = $damage;
     }
 
-    public function attack(Personnage $personnage)
+    public function attack(Personage $personnage)
     {
         // TODO: Implement attack() method.
     }

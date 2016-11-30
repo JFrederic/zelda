@@ -9,7 +9,7 @@
 namespace Zelda;
 
 
-abstract class Enemy implements Personnage
+abstract class Enemy implements Personage
 {
 
     public function getLife(): int
@@ -32,7 +32,7 @@ abstract class Enemy implements Personnage
         // TODO: Implement setDamage() method.
     }
 
-    public function attack(Personnage $personnage)
+    public function attack(Personage $personnage)
     {
         // TODO: Implement attack() method.
     }
