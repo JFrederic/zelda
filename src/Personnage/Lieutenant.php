@@ -9,7 +9,7 @@
 namespace Zelda;
 
 
-class Chief extends Enemy
+class Lieutenant extends Enemy
 {
 
 }
